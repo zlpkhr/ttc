@@ -1,0 +1,6 @@
+[submodule "td"]
+	path = td
+	url = https://github.com/tdlib/td.git
+[submodule "emsdk"]
+	path = emsdk
+	url = https://github.com/emscripten-core/emsdk.git

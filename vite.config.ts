@@ -1,10 +1,20 @@
-import devtoolsJson from 'vite-plugin-devtools-json';
-import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
+import fs from 'node:fs';
+import path from 'node:path';
 import { defineConfig } from 'vite';
+import devtoolsJson from 'vite-plugin-devtools-json';
+import { viteStaticCopy, type Target } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(), devtoolsJson()],
+	plugins: [
+		tailwindcss(),
+		sveltekit(),
+		devtoolsJson(),
+		viteStaticCopy({
+			targets: getTdTargets({ dest: '' })
+		})
+	],
 	test: {
 		projects: [
 			{
@@ -19,3 +29,16 @@ export default defineConfig({
 		]
 	}
 });
+
+function getTdTargets(targetOpts: Omit<Target, 'src'>) {
+	const distPath = path.join(import.meta.dirname, 'td', 'example', 'web', 'tdweb', 'dist');
+	const ignoreList = ['tdweb.js'];
+
+	return fs
+		.readdirSync(distPath)
+		.filter((file) => !ignoreList.includes(file))
+		.map((file) => ({
+			src: path.join(distPath, file),
+			...targetOpts
+		}));
+}
