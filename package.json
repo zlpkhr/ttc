@@ -26,6 +26,7 @@
 		"@tailwindcss/vite": "^4.0.0",
 		"@types/node": "^24.0.4",
 		"@types/tdweb": "^1.4.6",
+		"@vitest/web-worker": "^3.2.4",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",

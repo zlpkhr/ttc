@@ -15,6 +15,7 @@
         "@tailwindcss/vite": "^4.0.0",
         "@types/node": "^24.0.4",
         "@types/tdweb": "^1.4.6",
+        "@vitest/web-worker": "^3.2.4",
         "eslint": "^9.18.0",
         "eslint-config-prettier": "^10.0.1",
         "eslint-plugin-svelte": "^3.0.0",
@@ -264,6 +265,8 @@
     "@vitest/spy": ["@vitest/spy@3.2.4", "", { "dependencies": { "tinyspy": "^4.0.3" } }, "sha512-vAfasCOe6AIK70iP5UD11Ac4siNUNJ9i/9PZ3NKx07sG6sUxeag1LWdNrMWeKKYBLlzuK+Gn65Yd5nyL6ds+nw=="],
 
     "@vitest/utils": ["@vitest/utils@3.2.4", "", { "dependencies": { "@vitest/pretty-format": "3.2.4", "loupe": "^3.1.4", "tinyrainbow": "^2.0.0" } }, "sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA=="],
+
+    "@vitest/web-worker": ["@vitest/web-worker@3.2.4", "", { "dependencies": { "debug": "^4.4.1" }, "peerDependencies": { "vitest": "3.2.4" } }, "sha512-JXK3lMyZHDrJ/BrJmxSZxe3RYT9oy2juxN4kpdrQ8NL8iibz352lXbcrnqG4WuSoBDwhjgghgvmIpsTv9Be7eA=="],
 
     "acorn": ["acorn@8.15.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg=="],
 

@@ -16,6 +16,7 @@ export default defineConfig({
 		})
 	],
 	test: {
+		setupFiles: ['@vitest/web-worker'],
 		projects: [
 			{
 				extends: './vite.config.ts',
